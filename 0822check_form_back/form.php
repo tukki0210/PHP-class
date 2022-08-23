@@ -21,7 +21,7 @@
             </div>
             <label for="id"><span>ID</span></label>
             <br>
-            <input type="text" name="id" value="sample" />
+            <input type="text" name="id" />
             <br>
             <div style="color:red">
                 <?php if($_SESSION['pass']==='')
@@ -29,7 +29,7 @@
             </div>
             <label for="pass"><span>PASS</span></label>
             <br>
-            <input type="text" name="pass" value="sample" />
+            <input type="text" name="pass"/>
             <br>
             <input type="submit" value="送信" />
         </form>
