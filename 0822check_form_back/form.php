@@ -15,14 +15,18 @@
     <div class="wrap">
         <h2>idとpassを登録します</h2>
         <form method="POST" action="check.php">
-            <p>
-                <?php if($_SESSION['id_error']===true)
+            <div style="color:red">
+                <?php if($_SESSION['id']==='')
                 { print "入力必須です" ;} ?>
-            </p>
+            </div>
             <label for="id"><span>ID</span></label>
             <br>
             <input type="text" name="id" value="sample" />
             <br>
+            <div style="color:red">
+                <?php if($_SESSION['pass']==='')
+                { print "入力必須です" ;} ?>
+            </div>
             <label for="pass"><span>PASS</span></label>
             <br>
             <input type="text" name="pass" value="sample" />

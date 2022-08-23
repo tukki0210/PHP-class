@@ -5,8 +5,8 @@ session_start();
 $_SESSION['id'] = $_POST['id'];
 $_SESSION['pass'] = $_POST['pass'];
 
-if($_POST['id'] === ""){
-    $_SESSION['id_error']=true;
+// idまたはpassが空っぽだったら
+if($_POST['id'] === "" || $_POST['pass'] === ""){
     // 前のページへリダイレクトさせる。（P.374）
     header('location: http://localhost/~itsys/PHP-class/0822check_form_back/form.php');
     // リダイレクトしたあと、このファイル(check.php)を停止させる。
