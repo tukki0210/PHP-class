@@ -1,10 +1,3 @@
-<?php
-// セッション変数を利用するためにセッションを開始
-session_start();
-// セッション変数にPOSTメソッドで受け取った値を覚えさせる
-$_SESSION['id'] = $_POST['id'];
-$_SESSION['pass'] = $_POST['pass'];
-?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -26,18 +19,16 @@ $_SESSION['pass'] = $_POST['pass'];
 
         <!-- 標準：フォームのpostで移動 -->
         <form action="register.php" method="post">
+            <label for="id"><span>ID</span></label>
+            <br>
+            <input type="text" name="id" value="<?= $_POST['id']?>"/>
+            <br>
+            <label for="pass"><span>PASS</span></label>
+            <br>
+            <input type="text" name="pass" value="<?= $_POST['pass']?>"/>
+            <br>
             <input type="submit" value="登録する">
         </form>
-
-        <!-- 別解：フォームのgetで移動 -->
-        <form action="register.php" method="GET">
-            <input type="submit" value="登録する">
-        </form>
-        
-        <!-- 別解：JavaScriptを使ったページの移動（get） -->
-        <button type="button" onclick="location.href='form.php'">戻る</button>
-        <button type="button" onclick="location.href='register.php'">登録する</button>
-    </div>
 </body>
 
 </html>

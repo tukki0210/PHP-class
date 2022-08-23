@@ -15,15 +15,18 @@
         <form method="POST" action="check.php">
             <label for="id"><span>ID</span></label>
             <br>
-            <input type="text" name="id" value="sample" />
+            <input type="text" name="id" />
             <br>
             <label for="pass"><span>PASS</span></label>
             <br>
-            <input type="text" name="pass" value="sample" />
+            <input type="text" name="pass" />
             <br>
             <input type="submit" value="送信" />
         </form>
     </div>
 </body>
-
+<!-- ここからはJavaScript -->
+<script>
+    console.log('test')
+</script>
 </html>

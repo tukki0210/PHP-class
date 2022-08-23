@@ -6,11 +6,15 @@ $_SESSION['id'] = $_POST['id'];
 $_SESSION['pass'] = $_POST['pass'];
 
 if($_POST['id'] === ""){
-
-    header('location: http://localhost:8000/PHP-class/0822check_form_back/form.php');
+    // 前のページへリダイレクトさせる。（P.374）
+    header('location: http://localhost/~itsys/PHP-class/0822check_form_back/form.php');
+    // リダイレクトしたあと、このファイル(check.php)を停止させる。
     exit();
 }else{ 
-    ?>
+// 一度PHPを終了させる
+?>
+
+<!-- ifのelse内で表示するｈｔｍｌ -->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -36,4 +40,5 @@ if($_POST['id'] === ""){
 </body>
 
 </html>
+<!-- phpのelse文の終了を表す -->
 <?php }; ?>
