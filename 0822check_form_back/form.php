@@ -16,8 +16,8 @@
         <h2>idとpassを登録します</h2>
         <form method="POST" action="check.php">
             <p>
-                <php? if($_SESSION['id_error']===true)
-                { print "入力必須です" }; ?>
+                <?php if($_SESSION['id_error']===true)
+                { print "入力必須です" ;} ?>
             </p>
             <label for="id"><span>ID</span></label>
             <br>
