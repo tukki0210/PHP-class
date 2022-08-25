@@ -21,7 +21,8 @@
             </div>
             <label for="id"><span>ID</span></label>
             <br>
-            <input type="text" name="id" />
+            <input type="text" name="id"
+             />
             <br>
             <div style="color:red">
                 <?php if($_SESSION['pass']==='')
