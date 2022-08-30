@@ -10,10 +10,14 @@
         // 変にアレンジするとセキュリティの問題が起こるかも
     
         // $sttという変数名を定義（別にどんな名前でもいい、Statmentの略？)
-        $stt = $db->prepare('INSERT INTO memo(memo) VALUES(:memo)');
+        // insert into table名（列名） values(:列名)
+        // :列名　プレースホルダー
+        // プレースホルダーはそのあとのbindValue()のところで当てはめる
+        //プレースホルダーの名前はなんでもよい、bindValue()で対応していたらOK
+        $stt = $db->prepare('INSERT INTO memo(memo) VALUES(:test)');
     
         // 穴あきのSQL文にフォームの文字をいれて完成させていく
-        $stt->bindValue(':memo', $_POST['memo']);
+        $stt->bindValue(':test', $_POST['memo']);
     
         // SQLの実行
         $stt->execute();
@@ -32,5 +36,10 @@
 </head>
 <body>
     <h2>登録完了しました</h2>
+    <p>トークンの値</p>
+    <?php session_start(); ?>
+    <?= $_SESSION['token']; ?>
+    <p>隠しフィールドの値</p>
+    <?= $_POST['token']; ?>
 </body>
 </html>

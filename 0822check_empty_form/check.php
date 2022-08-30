@@ -6,13 +6,18 @@ $_SESSION['id'] = $_POST['id'];
 $_SESSION['pass'] = $_POST['pass'];
 
 // idまたはpassが空っぽだったら
-if ($_POST['id'] === "" || $_POST['pass'] === "") {
+// || or演算 P110
+// === 厳密な等価 P103
+// ==  ゆるい等価 P102
+if ($_POST['id'] === '' || $_POST['pass'] === '') {
     // 前のページへリダイレクトさせる。（P.374）
 
     // P377
     // $_SERVER['HTTP_HOST']：サーバーのホスト名（localhostなど）
     // $_SERVER['PHP_SELF']：実行中のスクリプト（このPHPファイル）のパス
     // .dirname（パス名）：指定したパスの一つ親のパスを返す
+
+    // URLは学校の環境と家の環境で違うので、$_SERVER[]を使い、動いてる環境のURLを登録させる
     header('location: http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/form.php');
     // リダイレクトしたあと、このファイル(check.php)を停止させる。
     exit();
