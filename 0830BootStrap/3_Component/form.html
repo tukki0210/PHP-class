@@ -12,22 +12,38 @@
 </head>
 
 <body>
-    <div class="container-fluid m-3">
-        <h3>フォーム</h3>
-        <form action="#">
-            <div class="form-group">
-                <label for="name" class="form-label">名前</label>
-                <input type="text" class="form-control-lg">
+    <div class="container mt-3">
+        <form>
+            <div class="row g-3">
+                <div class="col">
+                    <label for="" class="form-label">性</label>
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col">
+                    <label for="" class="form-label">名</label>
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">メール</label>
-                <input type="text" class="form-control">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">メール</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-            <div class="form-group">
-                <label for=""></label>
-                <input type="text" class="form-control-sm">
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">確認しました</label>
             </div>
+            <button type="submit" class="btn btn-primary">登録</button>
         </form>
+
+        <select class="form-select" aria-label="Default select example">
+
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
     </div>
     <!-- BootStrapのJavaScriptの部分 -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
